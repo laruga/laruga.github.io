@@ -2284,12 +2284,7 @@ input, select, textarea {
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
 	}
-
-		ul li {
-			padding-left: 0.5em;
-		}
 
 		ul.alt {
 			list-style: none;
@@ -2330,7 +2325,28 @@ input, select, textarea {
 			ul.icons li .icon:before {
 				font-size: 1.5em;
 			}
+			
+/* Icons List */
+ul.icons-list {
+	list-style: none;
+	padding: 0;
+	position: relative;
+}
 
+	ul.icons-list ul {
+		list-style: none;
+		font-size: 0.8em;
+	}
+
+	ul.icons-list ul li {
+		margin-bottom: -0.6em;
+		padding-left: 0em;
+	}
+
+/* Therapy Division */
+div.therapy-division {
+	padding-top: 1em;
+}
 /* Icons Grid */
 
 	ul.icons-grid {
