@@ -47,15 +47,40 @@
         </header>
         <p>
           Soy psicóloga sanitaria con muchos años de experiencia, constantemente me
-          sigo formando para mantenerme actualizada y reinventarme. 
-          </p>
-          <p>
+          sigo formando para mantenerme actualizada y reinventarme.
+        </p>
+        <p>
           Trabajo con niños,
           adolescentes y adultos.
           El tipo de terapia se adapta a cada uno porque cada persona es un mundo.
         </p>
         <div class="col-12">
-          <span class="image fit"><img src="images/laura_sobre_mi.jpeg" alt="" /></span>
+          <span class="image fit">
+
+\            <div class="slideshow-container">
+
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <img src="images/laura_sobre_mi.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="images/pic01.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="images/pic02.jpg" style="width:100%">
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- <img src="images/laura_sobre_mi.jpeg" alt="" /> -->
+
+          </span>
           <em class="image-footer">Número de colegiado en el Colegio Oficial de Psicólogos: 15122</em>
 
         </div>
@@ -71,9 +96,10 @@
           <h2>Terapias</h2>
         </header>
         <p>
-          Hago sesiones tanto presencial como online. Las sesiones tienen una duracion de 1 hora y la frecuencia se adapta a cada persona. 
+          Hago sesiones tanto presencial como online. Las sesiones tienen una duracion de 1 hora y la frecuencia se
+          adapta a cada persona.
         </p>
-          <ul class="icons-list">
+        <ul class="icons-list">
           <li>
             <span class="icon solid major fa-female"></span>
             <h3>Terapia de Adultos</h3>
@@ -113,27 +139,27 @@
             <span class="icon solid major fa-heart"></span>
             <h3>Terapia de Pareja</h3>
             <ul>
-            <li>Dificultades en la pareja</li>
-            <li>Rupturas</li>
-            <li>Celos</li>
-            <li>Infidelidades</li>
-            <li>Dependencia emocional</li>
-            <li>Dificulates sexuales</li>
-          </ul>
+              <li>Dificultades en la pareja</li>
+              <li>Rupturas</li>
+              <li>Celos</li>
+              <li>Infidelidades</li>
+              <li>Dependencia emocional</li>
+              <li>Dificulates sexuales</li>
+            </ul>
           </li>
           <div class="therapy-division"></div>
           <li>
             <span class="icon solid major fa-home"></span>
             <h3>Terapia de Familia</h3>
-          <ul>
-            <li>Divorcio y separacion</li>
-            <li>Nido vacio</li>
-            <li>Familias reestructuradas</li>
-            <li>Dificultades en relacion padres-hijos</li>
-            <li>Problemas de comunicacion</li>
-            <li>Dificultades de convivencia</li>
-            <li>Maltrato en la familia</li>
-          </ul>
+            <ul>
+              <li>Divorcio y separacion</li>
+              <li>Nido vacio</li>
+              <li>Familias reestructuradas</li>
+              <li>Dificultades en relacion padres-hijos</li>
+              <li>Problemas de comunicacion</li>
+              <li>Dificultades de convivencia</li>
+              <li>Maltrato en la familia</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -706,6 +732,40 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+
+  setTimeout(showSlides, 2000, slideIndex += 1); // Change image every 2 seconds
+
+
+  </script>
 </body>
 
 </html>
